@@ -10,6 +10,7 @@
 
       it('should return whatever value is passed into it', function() {
         var uniqueObject = {};
+
         expect(_.identity(1)).to.equal(1);
         expect(_.identity('string')).to.equal('string');
         expect(_.identity(false)).to.be.false;
@@ -464,7 +465,7 @@
       it('should not mutate the input array', function() {
         var input = [1,2,3,4,5];
         var result = _.reduce(input, function(memo, item) {return item;});
-        
+
         /*
          * Mutation of inputs should be avoided without good justification otherwise
          * as it can often lead to hard to find bugs and confusing code!
